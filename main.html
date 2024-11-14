@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <label for="name">enter disk's name</label><br/>
+    <input type="text" name="name" id="name"><br/>
+    <input type="button" value="sort" onclick="sortByDiskName()"><br/><br/>
+    <label for="sel">choose country</label>
     <select id="sel" onchange="showByCountry(event)"></select>
     <p>sort from year</p>
     <input type="number" id="from">
     <p>to year</p>
     <input type="number" id="to">
     <input type="button" value="sort" onclick="sortByYear()"><br/><br/>
+    
     <div id="show"></div>
+
     <label for="title">title</label><br/>
     <input type="text" name="title" id="title"><br/>
     <label for="artist">artist</label><br/>

@@ -2,6 +2,12 @@ for (let i = 0; i < catalog.length; i++) {
     catalog[i]["id"]=i+100;    
 }
 
+function sortByDiskName() {
+    let n=document.getElementById("name").value
+    let cat=catalog.filter(item=>item.title.includes(n))
+    printTable(cat)
+}
+
 function sortByname() {
     let countries=catalog.map(item=>item.country)
     countries=countries.filter((item,index)=>!countries.includes(item,index+1))
@@ -53,5 +59,5 @@ function removeDisk() {
     let x=document.getElementById("remove").value
     let i=catalog.findIndex(item=>item.id===x)
     catalog.splice(i,1)
-    console.log(catalog)
+    console.log(catalog) ;
 }
